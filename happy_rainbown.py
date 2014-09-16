@@ -1,5 +1,5 @@
-import mcpi.minecraft as minecraft
-import mcpi.block as block
+import khd.mcpi.minecraft as minecraft
+import khd.mcpi.block as block
 from math import *
 
 colors = [14, 1, 4, 5, 3, 11, 10]
