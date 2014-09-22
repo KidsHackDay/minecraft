@@ -4,7 +4,7 @@ from math import *
 
 colors = [14, 1, 4, 5, 3, 11, 10]
 
-mc = minecraft.Minecraft.create( 'khdminecraft.no-ip.org', 4711 )
+mc = minecraft.Minecraft.create()
 height = 60
 
 mc.setBlocks(-64,0,0,64,height + len(colors),0,0)
