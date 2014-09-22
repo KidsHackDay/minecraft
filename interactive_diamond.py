@@ -1,5 +1,5 @@
 from khd.minecraft import *
-from mcpi.vec3 import Vec3
+from khd.mcpi.vec3 import Vec3
 from time import *
 
 # This will make the block move when you hit it
