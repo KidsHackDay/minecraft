@@ -41,15 +41,9 @@ class MyGame( Game ) :
 
 
 	def checkWin( game ) :
-		blockHits = world.events.pollBlockHits()
-		# if a block has been hit
-		if blockHits:
-			# for each block that has been hit
-			for blockHit in blockHits:
-				# do something with the block
-				p = Vec3( blockHit.pos.x, blockHit.pos.y, blockHit.pos.z )
-				if Block( world.getBlock( p ) ) == DIAMOND_BLOCK :
-					return True
-		return False
+		return swordRightClick( DIAMOND_BLOCK )
+
+	def win( game ) :
+		world.postToChat( 'Yay! You won the game! :D' )
 
 game = MyGame()
