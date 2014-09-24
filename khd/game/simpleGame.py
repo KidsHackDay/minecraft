@@ -1,4 +1,5 @@
 class Game :
+	score = 0
 	def __init__( self ) :
 		self.start()
 		try :
@@ -10,7 +11,8 @@ class Game :
 				else :
 					self.loop()
 		except KeyboardInterrupt:
-			print 'exit'
+			print ''
+			print 'exiting the game'
 
 	def start( self ) :
 		print 'start'
