@@ -5,91 +5,54 @@
 This API will be used for Kids Hack Day Game Development Program. You can read
 more about the program at our [Process Wiki](http://kidshackday.github.io/wiki/#!programs/game-development.md).
 
-It should provide an abstraction layer to render mini-games inside Minecraft 
+It should provide an abstraction layer to render mini-games inside Minecraft
 (either Pi Edition or Bukkit with Raspberry Juice plugin).
 
-## Basic structure
+## Components
 
-We should provide a very simple structure for kids start developing straight 
-away without need any programming classes before. After this moment they can
-dig into the libraries to customize their games and then learn basic structures
-of programming.
+The Kids Hack Day Minecraft Library is made of small components to help handling
+the world blocks, rules and game mechanics.
 
-### Ideas for structures
+### Minecraft Pi Python API
 
-### Runtime
+We include the official Python API in our Library.
 
-	class Pong( Game ) :
-		def setup( self ) :
-			print 'run once'
-		def loop( self ) :
-			print 'run at a frame rate'
- 
-	class Game() :
-		def __init__( self ) :
-			self.setup()
-			while True :
-				self.loop()
+### Drawing
 
-### Procedural
+To build 3D shapes on Minecraft world we can use one of the three basic shapes
+available: Box, Line and Sphere. It also contain a module with some examples on
+how to make buildings with code.
 
-	block = create_block( x, y, z, width, height, depth, material )
-	def event( b ) :
-		do_something( b )
-	add_event( block, event )
+### Events
 
-### Listeners
-	
-	def listener( context ) :
-		context.doSomething()
-	block.addListener( listener )
+Raspberry Juice Plugin for Bukkit has so far only one event: Swords right click.
+We plan to extend it to all game events but for instance we have only this method
+that returns if the event occured on a specific coordinate of the world or a
+block type.
 
-### Attachments
+### Game
 
-	block = Block()
-	block.add( physics.gravity )
-	block.add( eventListener )
-	block.setMaterial( DIAMOND_BLOCK )
-	block.position( x, y, z )
-	block.size( width, height, depth )
-	block.draw()
+In order to provide a initial structure to develop the games, we built some
+objects to extend and override the needed methods. This give enough freedom to
+choose which code structure and paradigms we want to use: Procedural, Object
+Oriented, Event oriented, etc.
 
-## Libraries to build
-
-- Drawing
-	- Box
-	- Sphere
-	- Line
-	- Plane
-	- House
-	- Terrain
-	- Clear
-- Interaction
-	- onHit
-	- onAction (right click)
-	- onApproach
-	- onDestroy
-	- onCreate
-	- onMove
-	- onChange
-- Game mechanics
-	- Score
-	- Life
-	- XP
-	- Controls
-	- Start/Reset/Game Over
-	- Players list ("Player playing")
-
-## Libraries planned to be built
+## Roadmap
 
 - Physics
 - Hardware communication
 - GPIO
 - QuirkBot
 
+## Library structure
 
-
-
-
-
-
+- Draw
+	- Box
+	- Sphere
+	- Line
+	- Building
+		- house
+- Interaction
+	- swordRightClick
+- Game mechanics
+	- Simple Game (OO)
