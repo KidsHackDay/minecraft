@@ -42,9 +42,15 @@ If you are running Minecraft Pi Edition, you need only to start your game and ru
 
 ### MacOS or Linux
 
-Most of this OS come already with python installed, if don't [install it](https://www.google.se/search?q=how+to+install+python&oq=how+to+install+python&aqs=chrome..69i57j0l3.3600j0j7&sourceid=chrome&es_sm=93&ie=UTF-8).
+1. Most of this OS come already with python installed, if don't [install it](https://www.google.se/search?q=how+to+install+python&oq=how+to+install+python&aqs=chrome..69i57j0l3.3600j0j7&sourceid=chrome&es_sm=93&ie=UTF-8).
 
-After installed, type `python example_happy_rainbo.py` in your terminal (which should be on our minecraft-master folder) and check in your world if a big colorfull rainbow appeared around your spawn area.
+2. Connect to a Bukkit server with Raspberry Juice plugin (enter in touch if you want to connect on KHD server) or [setup your local server](http://wiki.bukkit.org/Setting_up_a_server).
+
+3. Download Raspberry Juice Plugin and unzip the `.jar` file inside the `Plugin` folder of your Bukkit server installation.
+
+4. Run or reset your Bukkit server.
+
+5. Type `python example_happy_rainbo.py` in your terminal (which should be on our minecraft-master folder) and check in your world if a big colorfull rainbow appeared around your spawn area.
 
 ### Windows
 
