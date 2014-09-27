@@ -50,7 +50,7 @@ If you are running Minecraft Pi Edition, you need only to start your game and ru
 
 4. Run or reset your Bukkit server.
 
-5. Type `python example_happy_rainbo.py` in your terminal (which should be on our minecraft-master folder) and check in your world if a big colorfull rainbow appeared around your spawn area.
+5. Type `python example_happy_rainbow.py` in your terminal (which should be on our minecraft-master folder) and check in your world if a big colorfull rainbow appeared around your spawn area.
 
 ### Windows
 
