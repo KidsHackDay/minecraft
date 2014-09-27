@@ -15,17 +15,14 @@ class MyGame( Game ) :
 		diamondPosition.y = randrange( size ) + dirtBoxPosition.y;
 		diamondPosition.z = randrange( size ) + dirtBoxPosition.z;
 
-		# Clear previous box
-		box = Box();
-		box.position( dirtBoxPosition.x, dirtBoxPosition.y, dirtBoxPosition.z )
-		box.size( size, size, size )
-		box.clear()
 
-		# Draw the box of dirty
 		box = Box()
-		box.position( dirtBoxPosition.x, dirtBoxPosition.y, dirtBoxPosition.z )
-		box.size( size, size, size )
+		box.position( dirtBoxPosition.x-1, dirtBoxPosition.y-1, dirtBoxPosition.z-1 )
+		box.size( size+2, size+2, size+2 )
 		box.material = DIRT
+		# Clear previous box
+		box.clear()
+		# Draw the box of dirty
 		box.draw()
 
 		# Put the diamond
