@@ -34,63 +34,7 @@ class MyGame( Game ) :
 		floor.size( 30, 2, 30 )
 		floor.clear()
 
-		game.drawTower()
-
-	def drawTower( game ) :
-		# Draw a big tower in middle of our stage
-		tower = Box()
-		tower.material = STONE_BRICK
-		tower.position( game.towerPos.x, game.towerPos.y, game.towerPos.z )
-		tower.size( game.towerSize.x, game.towerSize.y, game.towerSize.z )
-		tower.draw()
-
-		# Tower roof
-		roof = Box()
-		roof.material = STONE_BRICK
-		roof.position( tower.x - 1, tower.height, tower.z - 1 )
-		roof.size( tower.width + 2, 1, tower.depth + 2 )
-		roof.draw()
-
-		# Tower roof detail ;)
-		roofTop = Box()
-		roofTop.material = STONE_BRICK
-		roofTop.size( 1, 1, 1 )
-
-		roofTop.position( tower.x - 1, tower.height + 1, tower.z - 1 )
-		roofTop.draw()
-		roofTop.position( tower.x + 1, tower.height + 1, tower.z - 1 )
-		roofTop.draw()
-		roofTop.position( tower.x + 3, tower.height + 1, tower.z - 1 )
-		roofTop.draw()
-
-		roofTop.position( tower.x - 1, tower.height + 1, tower.z + 3 )
-		roofTop.draw()
-		roofTop.position( tower.x + 1, tower.height + 1, tower.z + 3 )
-		roofTop.draw()
-		roofTop.position( tower.x + 3, tower.height + 1, tower.z + 3 )
-		roofTop.draw()
-
-		roofTop.position( tower.x - 1, tower.height + 1, tower.z + 1 )
-		roofTop.draw()
-		roofTop.position( tower.x + 3, tower.height + 1, tower.z + 1 )
-		roofTop.draw()
-
-		# Draw 4 torchs around the tower
-		torch = Box()
-		torch.material = TORCH
-		torch.size( 1, 1, 1 )
-		# First torch
-		torch.position( tower.x + 1, 2, tower.z - 1 )
-		torch.draw()
-		# Second torch
-		torch.position( tower.x + 1, 2, tower.z + 3 )
-		torch.draw()
-		# Third
-		torch.position( tower.x - 1, 2, tower.z + 1 )
-		torch.draw()
-		# Fourth
-		torch.position( tower.x + 3, 2, tower.z + 1 )
-		torch.draw()
+		tower( game.towerPos.x, game.towerPos.y, game.towerPos.z, game.towerSize.x, game.towerSize.y, game.towerSize.z )
 
 	def loop( game ) :
 		# Check if someone hit a block
