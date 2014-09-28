@@ -1,24 +1,27 @@
 from khd.minecraft import *
 from time import *
 
-# This will make a block bounce
-box = Box();
-box.position( 0, 0, 0 )
-box.size( 11, 11, 11 )
+mypos = world.player.getPos()
+mypos.x = int( mypos.x )
+mypos.y = int( mypos.y )
+mypos.z = int( mypos.z )
+
 
 ball = Box()
 ball.material = WOOL
 ball.size( 1, 1, 1 )
-y = 0
-vel = 1
+ball.position( mypos.x, mypos.y, mypos.z )
+
+position = 0
+direction = 1
 
 while True :
 	ball.draw()
-	ball.position( 2, y, 2 )
-	if y >= 10 :
-		vel = -1
-	if y <= 1 :
-		vel = 1
-	y += vel
 	sleep( 0.5 )
-	box.clear()
+	if position >= mypos.y + 10 :
+		direction = -1
+	if position <= mypos.y :
+		direction = 1
+	position = position + direction
+	ball.clear()
+	ball.position(  mypos.x, position, mypos.z )
