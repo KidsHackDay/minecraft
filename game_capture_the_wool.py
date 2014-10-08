@@ -1,16 +1,19 @@
 from khd.minecraft import *
 
+# This is where you are
+steve = getMyPosition()
+
 class MyGame( Game ) :
 
-	tower1 = Vec3( 5, 0, 5 )
-	tower2 = Vec3( 80, 0, 80 )
+	tower1 = Vec3( steve.x + 5, steve.y, steve.z + 5 )
+	tower2 = Vec3( steve.x + 80, steve.y, steve.z + 80 )
 	towerSize = Vec3( 5, 15, 5 )
 
 	def start( game ) :
 		# Clear the arena
 		arena = Box()
 		arena.size( 90, 17, 90 )
-		arena.position( 0, 0, 0 )
+		arena.position( steve.x, steve.y, steve.z )
 		arena.clear()
 
 		# The red tower

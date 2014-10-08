@@ -1,6 +1,7 @@
 from mcpi.minecraft import *
 from mcpi.block import *
 
+# Write here your server address
+address = 'khdminecraft.no-ip.org'
 
-# world = minecraft.Minecraft.create( 'khdminecraft.no-ip.org', 4711 );
-world = Minecraft.create();
+world = Minecraft.create( address );

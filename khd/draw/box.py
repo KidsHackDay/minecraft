@@ -1,5 +1,4 @@
 from khd.config import *
-import numpy
 
 class Box :
 
@@ -14,14 +13,14 @@ class Box :
 		this.data = 1
 
 	def position( this, x = 0, y = 0, z = 0 ) :
-		this.x = x
-		this.y = y
-		this.z = z
+		this.x = int( x )
+		this.y = int( y )
+		this.z = int( z )
 
 	def size( this, width = 2, height = 2, depth = 2 ) :
-		this.width = width
-		this.height = height
-		this.depth = depth
+		this.width = int( width )
+		this.height = int( height )
+		this.depth = int( depth )
 
 	def material( this, material = DIRT, data = 1 ) :
 		this.material = material

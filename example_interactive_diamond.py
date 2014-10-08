@@ -2,10 +2,17 @@ from khd.minecraft import *
 from khd.mcpi.vec3 import Vec3
 from time import *
 
-# This will make the block move when you hit it
-pos = Vec3( 3, 0, 3 )
+# This is where you are
+steve = getMyPosition()
 
-world.setBlock( pos.x, pos.y, pos.z, DIAMOND_BLOCK )
+# This will make the block move when you hit it
+pos = Vec3( steve.x + 3, steve.y, steve.z + 3 )
+
+diamond = Box()
+diamond.material = DIAMOND_BLOCK
+diamond.position( pos.x, pos.y, pos.z )
+diamond.size( 1, 1, 1 )
+diamond.draw()
 
 while True:
 	#Get the block hit events

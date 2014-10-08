@@ -2,6 +2,9 @@ from khd.minecraft import *
 from random import randrange
 from khd.mcpi.vec3 import Vec3
 
+# This is where you are
+steve = getMyPosition()
+
 size = 4
 dirtBoxPosition = Vec3()
 diamondPosition = Vec3()
@@ -10,7 +13,7 @@ class MyGame( Game ) :
 
 	def start( game ) :
 		# Reset diamond position
-		dirtBoxPosition = Vec3( 5, 5, 5 )
+		dirtBoxPosition = Vec3( steve.x + 5, steve.y + 5, steve.z + 5 )
 		diamondPosition.x = randrange( size ) + dirtBoxPosition.x;
 		diamondPosition.y = randrange( size ) + dirtBoxPosition.y;
 		diamondPosition.z = randrange( size ) + dirtBoxPosition.z;
