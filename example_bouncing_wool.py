@@ -9,7 +9,7 @@ ball.material = WOOL
 ball.size( 1, 1, 1 )
 ball.position( steve.x, steve.y, steve.z + 2 )
 
-position = 0
+position = steve.y
 direction = 1
 
 while True :
